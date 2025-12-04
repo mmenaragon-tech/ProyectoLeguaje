@@ -1,0 +1,635 @@
+/* -------------------- GENERAL -------------------- */
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #303030;
+    width: 100%;
+}
+
+
+/* -------------------- NAVEGACIÓN Y ENCABEZADO -------------------- */
+
+#navegacion {
+    font-family: "Lato", sans-serif;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: clamp(5px, 1.5vw, 10px);
+    align-items: center;
+    flex-shrink: 1;
+    min-width: min-content;
+}
+
+#navegacion li {
+    color: white;
+    display: inline-block;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+}
+
+#navegacion li:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+#Encabezado {
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2px 40px;
+    justify-content: flex-start;
+    z-index: 50;
+    position: fixed;
+    top: 0;
+}
+
+#derecha {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 40px;
+    justify-content: center;
+    gap: 20px;
+}
+
+#divHeader {
+    display: inline-block;
+    margin-left: clamp(15px, 3vw, 75px);
+    margin-right: clamp(15px, 3vw, 75px);
+    flex-shrink: 0;
+}
+
+
+/* -------------------- ICONOS HEADER -------------------- */
+
+#lupa, #bandera, #perfil {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#bandera img {
+    width: auto;
+    height: 20px;
+}
+
+#perfil img {
+    width: auto;
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+#chat img {
+    width: auto;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+#lupa img {
+    width: auto;
+    height: 34px;
+}
+
+#divHeader img {
+    width: auto;
+    height: 40px;
+}
+
+
+/* -------------------- CUENTA Y CONTACTO -------------------- */
+
+#cuenta, #contacto {
+    font-family: "Lato", sans-serif;
+    flex-wrap: wrap;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+#cuenta {
+    background-color: black;
+}
+
+#contacto {
+    border: 2px solid beige;
+}
+
+#nombre, #mensaje {
+    color: white;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#nombre {
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+#mensaje {
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+
+#enlaceCuenta, #enlaceContacto {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+}
+
+
+/* -------------------- SECTION 1 (FONDO PRINCIPAL) -------------------- */
+
+#selector {
+    width: 100%;
+    height: auto;
+    background-image: url("imagenes/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 4%;
+}
+
+#contenedorPrimero {
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#contenedorGrande {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#menor {
+    justify-content: center;
+    margin-right: clamp(10px, 5vw, 50px);
+    margin-left: clamp(10px, 5vw, auto);
+}
+
+#menor img {
+    height: 50px;
+    width: auto;
+}
+
+#imagenAbajo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 1;
+    margin-right: 350px;
+}
+
+#imagenAbajo img {
+    height: 370px;
+    width: 720px;
+    display: block;
+}
+
+#fondoBlanco {
+    position: absolute;
+    top: 40px;
+    left: clamp(20px, 35vw, 480px);
+    height: 330px;
+    width: 550px;
+    background-color: white;
+    z-index: 2;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+    padding: clamp(10px, 3vw, 20px);
+}
+
+#info {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: clamp(15px, 5vw, 25px);
+}
+
+#titulo {
+    font-family: "Merriweather", serif;
+    margin: clamp(15px, 5vw, 25px);
+}
+
+#readMore {
+    font-family: "Lato", sans-serif;
+    flex-wrap: wrap;
+    display: inline-block;
+    list-style: none;
+    align-items: center;
+    background-color: black;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: clamp(15px, 5vw, 25px);
+}
+
+#mas {
+    color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+#leerMas {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+}
+
+#mayor {
+    justify-content: center;
+    margin-left: clamp(10px, 5vw, 50px);
+    margin-right: clamp(10px, 5vw, auto);
+}
+
+#mayor img {
+    height: 50px;
+    width: auto;
+}
+
+#barraDesplazamiento {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: clamp(10px, 3vw, 20px);
+}
+
+#barraDesplazamiento img {
+    transform: scale(0.8);
+}
+
+
+/* -------------------- SECTION 2 (TRES RECUADROS) -------------------- */
+
+#selector2 {
+    background-image: url(imagenes/fondo2.jpg);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+#primerRecuadro, #segundoRecuadro, #tercerRecuadro {
+    position: relative;
+    background-color: white;
+    height: 430px;
+    width: 400px;
+    flex: 0 0 400px;
+    margin: 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#primerRecuadro h1, #segundoRecuadro h1, #tercerRecuadro h1 {
+    font-family: "Roboto", sans-serif;
+    margin: clamp(15px, 5vw, 25px);
+    font-size: 150%;
+}
+
+#primerRecuadro p, #segundoRecuadro p, #tercerRecuadro p {
+    font-family: "Roboto", sans-serif;
+    margin: clamp(15px, 5vw, 25px);
+    font-size: 100%;
+    flex-grow: 1;
+}
+
+#primeraImagen, #segundaImagen, #terceraImagen {
+    display: flex;
+    margin: clamp(10px, 3vw, 25px);
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+}
+
+#primeraImagen img, #segundaImagen img, #terceraImagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-top: auto;
+}
+
+#primerEnlace, #segundoEnlace, #tercerEnlace {
+    margin-top: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+p a {
+    color: #4F80A8;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline solid #4F80A8;
+}
+
+
+/* -------------------- SECTION 3 (ORACLE CLOUD SPLIT) -------------------- */
+
+#oracleCloud {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+#primeraMitad {
+    background-image: url(imagenes/fondo3.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+    text-align: right;
+    margin: 0;
+    padding: 80px;
+    box-sizing: border-box;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#segundaMitad {
+    background-image: url(imagenes/fondo4.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    padding: 80px;
+    box-sizing: border-box;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#primeraMitad p {
+    margin-left: 30%;
+}
+
+#segundaMitad p {
+    margin-right: 30%;
+}
+
+#oracleCloud h1 {
+    font-weight: bolder;
+    margin-top: 0px;
+}
+
+#oracleCloud h2 {
+    margin-bottom: 8px;
+}
+
+#primeraMitad div, #segundaMitad div {
+    position: relative;
+    display: block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+
+#primeraMitad div {
+    margin-left: auto;
+}
+
+#segundaMitad div {
+    width: fit-content;
+    text-align: left;
+}
+
+#enlacePrimero, #enlaceSegundo {
+    white-space: nowrap;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+#linkApp, #linkOCI {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+}
+
+
+/* -------------------- SECTION 4 (TRUST / LOGOS) -------------------- */
+
+#oracleTrust {
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+#whyTrust {
+    margin-left: clamp(25px, 7vw, 40%);
+    font-size: 190%;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    font-family: "Merriweather", serif;
+}
+
+#customerStories {
+    margin-right: 7%;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    font-size: 120%;
+    margin-left: clamp(25px, 7vw, 40px);
+}
+
+#seisImagenes {
+    width: 100%;
+    align-items:center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1%;
+    background-color: white;
+    margin-top: 1%;
+    justify-content: center;
+}
+
+#seisImagenes div {
+    padding-bottom: 4px;
+    border-bottom: 3px solid #D6D6D6;
+    width: 14%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 215px;
+}
+
+#seisImagenes div:hover {
+    border-bottom: 3px solid darkslategray;
+    cursor: pointer;
+}
+
+#uber, #aon, #australianUni, #mgmResorts, #amc, #thorn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#uber, #aon, #amc {
+    height: 45px;
+    width: 60%;
+}
+
+#australianUni {
+    height: 35px;
+    width: 60%;
+}
+
+#mgmResorts {
+    height: 35px;
+    width: 65%;
+}
+
+#thorn {
+    height: 55px;
+    width: 65%;
+}
+
+
+/* -------------------- SECTION 5 (IMAGEN FINAL / UNIVERSIDAD) -------------------- */
+
+#imagenFinal {
+    background-image: url(imagenes/telescope.png);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    aspect-ratio: 14 / 5;
+    flex-wrap: wrap;
+    font-family: "Roboto", sans-serif;
+}
+
+#nationalUni {
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    margin: clamp(6%, 3vw, 11%);
+}
+
+#nationalUni h1 {
+    font-size: 160%;
+    margin-top: 7%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+#linkUniversidad {
+    font-size: 100%;
+    margin-bottom: 7%;
+    margin-left: 6%;
+    margin-right: 6%;
+    background-color: #303030;
+    color: white;
+    flex-wrap: wrap;
+    display: flex;
+    height: 20%;
+    width: fit-content;
+    justify-content: center;
+    align-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+#linkUniversidad p {
+    font-size: 80%;
+    font-weight: 500;
+}
+
+#linkUniversidad a {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+
+
+#footer {
+    background-color: #303030;
+    width: 100%;
+    display: flex;                 /* <-- IMPORTANTE */
+    justify-content: center;
+    align-items: center;
+}
+
+#redesSociales {
+    display: flex;                 /* <-- CAMBIO: flex normal */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;                     /* separa los div */
+}
+
+#redesSociales div {
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+#redesSociales img {
+    width: auto;                  /* tamaño normal */
+    height: 24px;                 /* evita que se vea microscópico */
+}
