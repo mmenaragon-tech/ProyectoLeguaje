@@ -12,6 +12,9 @@ header {
 }
 
 
+
+
+
 /* -------------------- NAVEGACIÓN Y ENCABEZADO -------------------- */
 
 #navegacion {
@@ -47,9 +50,10 @@ header {
     padding: 2px 40px;
     justify-content: flex-start;
     z-index: 50;
-    position: fixed;
+    position: sticky;
     top: 0;
 }
+
 
 #derecha {
     flex-shrink: 0;
@@ -164,7 +168,8 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 4%;
+    
+    
 }
 
 #contenedorPrimero {
@@ -197,6 +202,7 @@ header {
     margin-bottom: 20px;
     z-index: 1;
     margin-right: 350px;
+    
 }
 
 #imagenAbajo img {
@@ -284,6 +290,8 @@ header {
 }
 
 
+
+
 /* -------------------- SECTION 2 (TRES RECUADROS) -------------------- */
 
 #selector2 {
@@ -360,102 +368,106 @@ p a:hover {
 
 /* -------------------- SECTION 3 (ORACLE CLOUD SPLIT) -------------------- */
 
-#oracleCloud {
+
+#oracleCloud { 
     width: 100%;
-    height: auto;
-    align-items: center;
-    justify-self: center;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
 }
+
 
 #primeraMitad {
     background-image: url(imagenes/fondo3.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%;
-    width: 50%;
+    flex: 1 1 50%;
+    min-width: clamp(300px, 40%, 600px);
     text-align: right;
     margin: 0;
     padding: 80px;
-    box-sizing: border-box;
-    flex: 0 0 50%;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: flex-end;
+    box-sizing: border-box;
 }
+
 
 #segundaMitad {
     background-image: url(imagenes/fondo4.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100%;
-    width: 50%;
+    flex: 1 1 50%;
+    min-width: clamp(300px, 40%, 600px);
     margin: 0;
     padding: 80px;
-    box-sizing: border-box;
-    flex: 0 0 50%;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
+    margin-right: auto;
 }
 
+
 #primeraMitad p {
-    margin-left: 30%;
+    margin-left: clamp(10px, 10%, 30%);
 }
 
 #segundaMitad p {
-    margin-right: 30%;
+    margin-right: clamp(10px, 10%, 30%);
 }
+
 
 #oracleCloud h1 {
     font-weight: bolder;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 #oracleCloud h2 {
     margin-bottom: 8px;
 }
 
-#primeraMitad div, #segundaMitad div {
+
+#primeraMitad div {
     position: relative;
-    display: block;
+    display: inline-block;
     margin-top: 30px;
+    padding: 0; 
+    background: none;
+    flex-shrink: 0;
+    width: fit-content;
+} 
+#segundaMitad div {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 0; 
+    background: none;
+    flex-shrink: 0;
+    width: fit-content;
+    
+}
+
+#linkApp, #linkOCI {
+    display: block;
     padding: 14px 32px;
     background: white;
     color: black;
     border-radius: 5px;
-}
-
-#primeraMitad div {
-    margin-left: auto;
-}
-
-#segundaMitad div {
-    width: fit-content;
-    text-align: left;
-}
-
-#enlacePrimero, #enlaceSegundo {
-    white-space: nowrap;
-    width: fit-content;
-    margin: 0;
-    padding: 0;
-    font-size: 80%;
+    text-decoration: none;
     font-weight: bold;
+    font-size: 80%;
+    white-space: nowrap;
+    min-width: fit-content;
 }
 
-#linkApp, #linkOCI {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 0;
-    bottom: 0;
-}
+
 
 
 /* -------------------- SECTION 4 (TRUST / LOGOS) -------------------- */
@@ -545,26 +557,29 @@ p a:hover {
 /* -------------------- SECTION 5 (IMAGEN FINAL / UNIVERSIDAD) -------------------- */
 
 #imagenFinal {
-    background-image: url(imagenes/telescope.png);
     width: 100%;
-    height: auto;
+    height: 70%;        
+    background-image: url(imagenes/telescope.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    align-items: center;
-    justify-self: center;
     display: flex;
-    aspect-ratio: 14 / 5;
-    flex-wrap: wrap;
+ 
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
 }
+
 
 #nationalUni {
     width: 40%;
-    height: 40%;
     background-color: white;
     margin: clamp(6%, 3vw, 11%);
+    box-sizing: border-box;
+
+    min-width: 20%;   
+    min-height: 15%;  
 }
+
 
 #nationalUni h1 {
     font-size: 160%;
@@ -582,7 +597,7 @@ p a:hover {
     color: white;
     flex-wrap: wrap;
     display: flex;
-    height: 20%;
+    
     width: fit-content;
     justify-content: center;
     align-content: center;
@@ -612,16 +627,16 @@ p a:hover {
 #footer {
     background-color: #303030;
     width: 100%;
-    display: flex;                 /* <-- IMPORTANTE */
+    display: flex;                 
     justify-content: center;
     align-items: center;
 }
 
 #redesSociales {
-    display: flex;                 /* <-- CAMBIO: flex normal */
+    display: flex;                 
     justify-content: center;
     align-items: center;
-    gap: 20px;                     /* separa los div */
+    gap: 20px;                     
 }
 
 #redesSociales div {
@@ -630,6 +645,6 @@ p a:hover {
 }
 
 #redesSociales img {
-    width: auto;                  /* tamaño normal */
-    height: 24px;                 /* evita que se vea microscópico */
+    width: auto;                  
+    height: 24px;                 
 }
